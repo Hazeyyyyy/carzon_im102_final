@@ -1,0 +1,549 @@
+/* =========================================================
+   GENERAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:#F8FAFC;
+    color:#374151;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:35px auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    height:80px;
+    background:#FFFFFF;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    border-bottom:1px solid #E5E7EB;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+}
+
+.navLogo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:28px;
+    font-weight:bold;
+    color:#0F766E;
+}
+
+.navLogo span{
+    font-size:24px;
+}
+
+.navLinks{
+    display:flex;
+    gap:28px;
+}
+
+.navLinks a{
+    color:#4B5563;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navLinks a:hover{
+    color:#35C4BE;
+}
+
+.navUser{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.userTag{
+    background:#E8FAFA;
+    color:#0F766E;
+    padding:10px 16px;
+    border-radius:25px;
+    font-weight:600;
+}
+
+.logout{
+    color:#EF4444;
+    font-weight:600;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboardHeader{
+    margin-bottom:30px;
+}
+
+.dashboardTitle{
+    font-size:40px;
+    color:#1F2937;
+    margin-bottom:10px;
+}
+
+.dashboardSubtitle{
+    color:#6B7280;
+    font-size:17px;
+}
+
+.dashboardButtons{
+    display:flex;
+    gap:15px;
+    margin:30px 0;
+}
+
+.dashboardCards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.card{
+    background:#FFFFFF;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    border:1px solid #E5E7EB;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    color:inherit;
+    text-decoration:none;
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    color:inherit;
+}
+
+.card h3{
+    color:#374151;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:34px;
+    font-weight:bold;
+    color:#35C4BE;
+}
+
+.recentOrders{
+    background:#FFFFFF;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:25px;
+}
+
+.pageTitle{
+    font-size:34px;
+    color:#1F2937;
+    margin-bottom:8px;
+}
+
+.pageSubtitle{
+    color:#6B7280;
+    font-size:15px;
+}
+
+
+/* =========================================================
+   CONTENT CARD
+========================================================= */
+
+.contentCard{
+    background:#FFFFFF;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.searchForm{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.searchForm input{
+    width:420px;
+    padding:14px 18px;
+    border:1px solid #D1D5DB;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.searchForm input:focus{
+    border-color:#35C4BE;
+    box-shadow:0 0 5px rgba(53,196,190,.35);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.dataTable{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+.dataTable th{
+    background:#35C4BE;
+    color:#FFFFFF;
+    padding:18px;
+    text-align:center;
+    font-weight:600;
+}
+
+.dataTable td{
+    padding:18px 12px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.dataTable tr:hover{
+    background:#F8FAFC;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.addButton{
+    background:#35C4BE;
+    color:#FFFFFF;
+    padding:12px 24px;
+    border:none;
+    border-radius:12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+    min-width:150px;
+}
+
+.addButton:hover{
+    background:#28B8B1;
+}
+
+.actionButtons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.editButton,
+.deleteButton{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:70px;
+
+    height:38px;
+
+    border-radius:8px;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.editButton{
+    background:#3B82F6;
+}
+
+.editButton:hover{
+    background:#2563EB;
+}
+
+.deleteButton{
+    background:#EF4444;
+}
+
+.deleteButton:hover{
+    background:#DC2626;
+}
+
+.actionButtons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+}
+
+.formCard{
+    max-width:650px;
+    margin:0 auto;
+    background:#FFFFFF;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.formGroup{
+    margin-bottom:20px;
+}
+
+.formGroup label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.formGroup textarea{
+    resize:vertical;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus{
+    border-color:#35C4BE;
+    box-shadow:0 0 5px rgba(53,196,190,.35);
+}
+
+.formButtons{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
+
+.cancelButton{
+    background:#9CA3AF;
+    color:#FFFFFF;
+    padding:12px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cancelButton:hover{
+    background:#6B7280;
+}
+
+.successMessage{
+    background:#D1FAE5;
+    color:#065F46;
+    border:1px solid #6EE7B7;
+    padding:15px 20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.userButtons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:nowrap;
+}
+
+.userButtons .editButton,
+.userButtons .deleteButton{
+    min-width:110px;
+    text-align:center;
+}
+
+.userButtons .userTag{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-width:110px;
+    padding:12px 18px;
+    border-radius:30px;
+    background:#DDF5F4;
+    color:#0F766E;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.authContainer{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#F8FAFC;
+}
+
+.authCard{
+    width:100%;
+    max-width:450px;
+    background:#FFFFFF;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.authLogo{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.authTitle{
+    text-align:center;
+    color:#0F766E;
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.authSubtitle{
+    text-align:center;
+    color:#6B7280;
+    margin-bottom:30px;
+}
+
+.authForm{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.authForm label{
+    font-weight:600;
+    color:#374151;
+}
+
+.authForm input{
+    padding:14px;
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+.authForm input:focus{
+    border-color:#35C4BE;
+    box-shadow:0 0 5px rgba(53,196,190,.35);
+}
+
+.authButton{
+    margin-top:10px;
+    background:#35C4BE;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.authButton:hover{
+    background:#28B8B1;
+}
+
+.authLink{
+    margin-top:20px;
+    text-align:center;
+}
+
+.authLink a{
+    color:#35C4BE;
+    font-weight:bold;
+}
+
+.errorBox{
+    background:#FEE2E2;
+    color:#B91C1C;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.successBox{
+    background:#DCFCE7;
+    color:#15803D;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.textCenter{
+    text-align:center;
+}
+
+.mt20{
+    margin-top:20px;
+}
+
+.mb20{
+    margin-bottom:20px;
+}
